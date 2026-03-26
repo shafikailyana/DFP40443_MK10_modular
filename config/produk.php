@@ -15,7 +15,7 @@ $data = [
     [
         'id' => 2,
         'nama' => 'Buah Pinggang',
-        'gambar' => 'buah_pinggang.png',
+        'gambar' => 'buah_pinggang.jpg',
         'harga' => [
             'pek_mini' => 3.00,
             'pek_besar' => 6.00
@@ -35,7 +35,7 @@ $data = [
     [
         'id' => 4,
         'nama' => 'Tart Nenas',
-        'gambar' => 'tart_nenas.png',
+        'gambar' => 'tart_nanas.png',
         'harga' => [
             'pek_mini' => 2.00,
             'pek_besar' => 4.50
