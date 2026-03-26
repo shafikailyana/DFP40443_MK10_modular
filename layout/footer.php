@@ -1,8 +1,11 @@
 </div>
 
-<footer class="main-footer">
-&copy; 2026 Sabri bin Saep
-</footer>
+    <footer>
+
+        <p>© 2026 Sabri bin Saep</p>
+
+    </footer>
 
 </body>
+
 </html>

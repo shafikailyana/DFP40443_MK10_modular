@@ -1,9 +1,9 @@
-<nav class="nav-menu">
+<nav>
 
-<a href="index.php?menu=utama" class="nav-link">Utama</a>
+    <a href="index.php?menu=utama">Utama</a>
 
-<a href="index.php?menu=tempah" class="nav-link">Tempah</a>
+    <a href="index.php?menu=tempah">Tempah</a>
 
-<a href="index.php?menu=invois" class="nav-link">Invois</a>
+    <a href="index.php?menu=invois">Invois</a>
 
 </nav>

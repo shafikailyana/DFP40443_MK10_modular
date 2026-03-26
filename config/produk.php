@@ -1,44 +1,45 @@
 <?php
 
 $data = [
+
     [
         'id' => 1,
-        'nama' => 'Kuih Semperit',
-        'gambar' => 'kuih_semperit.png',
-        'harga' => [
-            'pek_mini' => 2.00,
-            'kecil' => 17.00,
-            'besar' => 34.00
-        ]
-    ],
-    [
-        'id' => 2,
         'nama' => 'Biskut Mazola',
         'gambar' => 'biskut_mazola.png',
         'harga' => [
             'pek_mini' => 2.00,
-            'kecil' => 20.00,
-            'besar' => 40.00
+            'pek_besar' => 4.00
         ]
     ],
+
+    [
+        'id' => 2,
+        'nama' => 'Buah Pinggang',
+        'gambar' => 'buah_pinggang.png',
+        'harga' => [
+            'pek_mini' => 3.00,
+            'pek_besar' => 6.00
+        ]
+    ],
+
     [
         'id' => 3,
-        'nama' => 'Buah Pinggang',
-        'gambar' => 'buah_pinggang.jpg',
+        'nama' => 'Kuih Semperit',
+        'gambar' => 'kuih_semperit.png',
         'harga' => [
-            'pek_mini' => 2.00,
-            'kecil' => 22.00,
-            'besar' => 44.00
+            'pek_mini' => 2.50,
+            'pek_besar' => 5.00
         ]
     ],
+
     [
         'id' => 4,
-        'nama' => 'Tart Nanas',
-        'gambar' => 'tart_nanas.png',
+        'nama' => 'Tart Nenas',
+        'gambar' => 'tart_nenas.png',
         'harga' => [
             'pek_mini' => 2.00,
-            'kecil' => 25.00,
-            'besar' => 50.00
+            'pek_besar' => 4.50
         ]
     ]
+
 ];
