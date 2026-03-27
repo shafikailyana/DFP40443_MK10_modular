@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 foreach ($saiz_list as $saiz => $qty) {
 
-                    $qty = (int)$qty;
+                    $qty = (int) $qty;
 
                     if ($qty > 0) {
 
@@ -51,7 +51,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($jumlah_besar == 0) {
 
-        header("Location:../index.php?menu=tempah");
+        echo "<script>
+
+                alert('Sila pilih sekurang-kurangnya satu biskut');
+                window.location.href='../index.php?menu=tempah';
+
+              </script>";
+
         exit();
 
     }
