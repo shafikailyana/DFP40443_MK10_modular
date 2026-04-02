@@ -1,55 +1,43 @@
-<?php include "config/produk.php"; ?>
+<?php
+require_once __DIR__ . '/../function/tempah.php';
+prosesTempahan();
+include __DIR__ . '/../data/produk.php';
 
-<h2>Borang Tempahan</h2>
+$error_message = '';
+if (isset($_GET['error'])) {
+    switch ($_GET['error']) {
+        case 'no_items':
+            $error_message = 'Sila pilih sekurang-kurangnya satu item untuk ditempah.';
+            break;
+        case 'no_name':
+            $error_message = 'Sila masukkan nama penuh.';
+            break;
+    }
+}
+?>
 
-<form method="POST" action="process/tempah_process.php" id="formTempah">
+<h1 class="page-title">Borang Tempahan</h1>
 
-    <div class="produk-container">
+<?php if ($error_message): ?>
+    <div class="error-message" style="color: red; text-align: center; margin-bottom: 20px;">
+        <?php echo htmlspecialchars($error_message); ?>
+    </div>
+<?php endif; ?>
 
+<form method="POST">
+    <div class="product-grid">
         <?php foreach ($data as $produk): ?>
-
-            <div class="card">
-
-                <img src="gambar/<?= $produk['gambar'] ?>">
-
-                <h3><?= $produk['nama'] ?></h3>
-
-                <?php foreach ($produk['harga'] as $saiz => $harga): ?>
-
-                    <p>
-                        <?= ucwords(str_replace('_', ' ', $saiz)) ?>
-                        RM <?= number_format($harga, 2) ?>
-                    </p>
-
-                    <input
-                        type="number"
-                        name="tempahan[<?= $produk['id'] ?>][<?= $saiz ?>]"
-                        value="0"
-                        min="0"
-                        data-price="<?= $harga ?>"
-                        class="qty-input"
-                    >
-
-                <?php endforeach; ?>
-
-            </div>
-
+            <?php include __DIR__ . '/../components/product-card.php'; ?>
         <?php endforeach; ?>
-
     </div>
-
-    <div class="card">
-
-        <label>Nama Penuh</label>
-
-        <input type="text" name="nama_pelanggan" required>
-
-        <h3 id="total-price">RM 0.00</h3>
-
-        <button type="submit">Teruskan</button>
-
+    
+    <div class="checkout-section">
+        <div class="total-display">
+            <span class="total-label"> Jumlah Harga: </span>
+            <span id="total-price" class="total-amount"> RM 0.00 </span>
+        </div>
+        <input type="text" name="nama_pelanggan" required placeholder="Nama Penuh" class="checkout-input">
+        <button class="checkout-button"> Teruskan </button>
     </div>
-
 </form>
-
-<script src="assets/js/tempah.js"></script>
+<script src="assets/script.js"></script>
